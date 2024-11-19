@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-import Collectivelogo from "../src/assets/circle-star (1).png";
+import Collectivelogo from "../src/assets/circle-star (2).png";
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
@@ -138,6 +138,7 @@ const App = () => {
                   alt="Collectives Icon"
                   className="icon-lo"
                 />{" "}
+                <i className="fi fi-bs-circle-star"></i>{" "}
               </span>
               Collectives
             </div>
@@ -208,7 +209,7 @@ const App = () => {
               </a>
             </h2>
             <div className="tags">
-              {question.tags.map((tag) => (
+              {question.tags.slice(0,5).map((tag) => (
                 <span key={tag} className="tag">
                   {tag}
                 </span>
@@ -229,7 +230,7 @@ const App = () => {
               </div>
               <div className="question-meta">
                 asked {new Date(question.creation_date * 1000).toLocaleString()}{" "}
-                by {question.owner?.display_name}
+                by : {question.owner?.display_name}
               </div>
             </div>
           </div>
@@ -275,7 +276,7 @@ const App = () => {
               <img
                 src="https://th.bing.com/th?id=OIP.Igvn9akU-KpKFGhR17vmbAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
                 alt="icon"
-                style={{ marginRight: "8px",height:"30px" }}
+                style={{ marginRight: "8px", height: "25px" ,paddingTop:"15px" }}
               />
               Beta release of Collectives on Stack Overflow
             </li>
@@ -306,7 +307,7 @@ const App = () => {
                 padding: "0.5rem",
                 border: "1px solid #ddd",
                 borderRadius: "4px",
-                backgroundColor:"white"
+                backgroundColor: "white",
               }}
             />
           </div>

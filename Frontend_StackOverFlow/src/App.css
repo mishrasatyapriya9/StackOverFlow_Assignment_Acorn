@@ -14,6 +14,7 @@ body {
   grid-template-columns: 1fr 3fr 1fr;
   gap: 1rem;
   padding: 1rem;
+  font-family:Roboto;
 }
 
 .header {
@@ -75,51 +76,54 @@ body {
 }
 
 /* Sidebar */
+/* Sidebar */
 .sidebar {
   background: #ffffff;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.menu-item {
-  padding: 0.8rem 1rem;
-  cursor: pointer;
-  color: #333;
-  font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.sidebar ul li {
-  padding: 0.8rem;
-  cursor: pointer;
-  color: #0074cc;
-  display: flex;
-  align-items: center;
+.menu-item {
+  padding: 0.8rem 0.5rem;
+  color: #333;
+  font-weight: 500;
   transition: background 0.3s, color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #f4f4f4;
   border-radius: 6px;
 }
 
-.sidebar ul li:hover {
-  background-color: #f4f4f4;
-  color: #005fa3;
+.menu-item div {
+  display: flex;
+  align-items: center;
 }
 
-.sidebar ul li .menu-icon {
-  margin-right: 6px;
+.menu-item .menu-icon {
+  margin-right: 10px;
   font-size: 1.2rem;
+  color: #ffa500; /* Orange color for icons */
+}
+
+.menu-item:hover .menu-icon {
+  color: #e67e22; /* Darker orange on hover */
+}
+
+.icon-lo {
+  height: 18px;
 }
 
 .sidebar ul li ul.submenu {
   list-style: none;
-  padding-left: 1.5rem;
+  padding-left: 1.5rem; /* Indent submenu items */
   margin-top: 0.5rem;
 }
 
@@ -127,10 +131,12 @@ body {
   font-size: 0.9rem;
   color: #555;
   cursor: pointer;
+  padding: 0.5rem 0;
 }
 
 .sidebar ul li ul.submenu li:hover {
   color: #333;
+  text-decoration: underline;
 }
 
 /* Main Content */
@@ -193,7 +199,7 @@ body {
   padding: 5px;
   border: 1px solid black;
   margin-right: 9px;
-  background-color: rgb(248, 247, 245);
+  background-color: white;
   border-radius: 50px;
 }
 
