@@ -65,6 +65,7 @@ const App = () => {
       .catch((error) => {
         console.error("Error searching data", error);
       });
+    setSearchQuery("")
   };
 
   return (
@@ -202,7 +203,7 @@ const App = () => {
           <button className="ask-button">Ask Question</button>
         </header>
 
-        {questions.map((question) => (
+        {questions.slice(0,6).map((question) => (
           <div key={question.question_id} className="question-card">
             <h2 className="question-title">
               <a href={question.link} target="_blank" rel="noopener noreferrer">
@@ -219,14 +220,14 @@ const App = () => {
             <div className="question-details">
               <div className="stats">
                 <span className="stat">
-                  <i className="fas fa-arrow-up"></i> {question?.score} votes
+                  <i className="fas fa-arrow-up" style={{color:"orange"}}></i> {question?.score}
                 </span>
                 <span className="stat">
                   <i className="fas fa-comments"></i> {question?.answer_count}{" "}
-                  answers
+                  
                 </span>
                 <span className="stat">
-                  <i className="fas fa-eye"></i> {question?.view_count} views
+                  <i className="fas fa-eye"></i> {question?.view_count} 
                 </span>
               </div>
               {/* <div className="question-meta">
