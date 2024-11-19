@@ -1,4 +1,4 @@
-# StackOverflow Clone Web Application
+# StackOverflow Assignment By Acorn
 
 This project is a StackOverflow clone that replicates the design and functionality of the StackOverflow webpage. The web app fetches dynamic data from StackExchange APIs and implements key features like question filters, dynamic question listing, search functionality, and more.
 
@@ -51,16 +51,18 @@ Ensure you have the following installed:
 
     ```bash
      npm start
+### File structure:
 
-  /public                # Static assets like images, fonts, etc.
-    /index.html          # Main HTML file
-  /src
-    /components          # Reusable components (e.g., Navbar, QuestionCard, etc.)
-    /utils               # Utility functions like TimeAgoCheck.js
-    /App.js              # Main React component
-    /index.js            # ReactDOM rendering
-    /styles              # SCSS/CSS files
-    /api                 # API calls to fetch data
+    ```bash
+    /public                # Static assets like images, fonts, etc.
+      /index.html          # Main HTML file
+    /src
+      /components          # Reusable components (e.g., Navbar, QuestionCard, etc.)
+      /utils               # Utility functions like TimeAgoCheck.js
+      /App.js              # Main React component
+      /index.js            # ReactDOM rendering
+      /styles              # SCSS/CSS files
+      /api                 # API calls to fetch data
 
 Key API Endpoints Used:
 Questions:
